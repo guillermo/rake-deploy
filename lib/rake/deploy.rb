@@ -54,8 +54,3 @@ namespace :deploy do
   end
   
 end
-
-after :deploy do
-  puts "=> restart"
-  deploy.run(deploy.host, "touch #{deploy.deploy_to}/current/tmp/restart.txt")
-end
