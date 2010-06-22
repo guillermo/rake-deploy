@@ -1,5 +1,3 @@
-require 'net/ssh'
-require 'ostruct'
 require 'rake/hooks'
 require 'rake/deploy/deploy'
 require 'rake/deploy/object'

@@ -1,3 +1,6 @@
+require 'net/ssh'
+require 'ostruct'
+
 class Deploy < OpenStruct
   def initialize
     super
