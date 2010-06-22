@@ -5,13 +5,13 @@ require 'rake/deploy/object'
 desc 'Deploy the application'
 task :deploy => ["deploy:symlink"]
 
-
 namespace :deploy do 
   
   desc 'Generate timestamp for revision name'
   task :generate_timestamp do
     deploy.release_name ||= Time.now.utc.strftime("%Y%m%d%H%M.%S")
     deploy.release_path ||= "#{deploy.deploy_to}/releases/#{deploy.release_name}"
+    deploy.current_path ||= "#{deploy.deploy_to}/current"
   end
   
   desc 'Update remote repo'
