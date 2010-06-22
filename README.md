@@ -2,6 +2,8 @@
 
 A deploy system using rake. Maybe a light version of capistrano
 
+You may prefer to see the [updated wiki](http://wiki.github.com/guillermo/rake-deploy/)
+
 ## Motivation
 
 Capistrano is a great project, maybe a little big in some cases, but with one big problem: it aims to cover all possible use cases.
@@ -22,7 +24,6 @@ In your Rakefile add:
 
 In any of your task files (for example, for rails: lib/tasks/deploy.rake)
 
-    deploy.application = "app_name"
     deploy.deploy_to   = "/apps/app_name"
     deploy.repository  = "ssh://user@github.com/myrepo.git"
     deploy.host        = "esther.cientifico.net"
@@ -45,9 +46,8 @@ Or you want to make a backup of your database in each deploy
       deploy.run("db.my_company.com", "mysqldump -u root my_app_db_production | gzip > /var/backups/#{deploy.release_name}.db.sql.bz2")
     end
     
-You can see more recipes, that you most copy and paste and edit in your files in the wiki:
+You can see more [recipes](http://wiki.github.com/guillermo/rake-deploy/recipes), that you most copy and paste and edit in your files in the wiki:
 
-http://wiki.github.com/guillermo/rake-deploy/recipes
 
 ## Conventions
 
@@ -64,7 +64,7 @@ Guillermo Álvarez <guillermo@cientifico.net>
 
 ## Web
 
-http://github.com/guillermo/rake-deploy
+[Github rake-deploy](http://github.com/guillermo/rake-deploy)
 
 ## Date of writing 
   
